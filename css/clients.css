@@ -210,7 +210,7 @@
 
 @media (max-width: 768px) {
     .section {
-        padding: 3rem 1rem;
+        padding: 3rem 5%;
     }
 
     .section-title {
@@ -218,7 +218,8 @@
     }
 
     .carousel-container {
-        padding: 0 50px;
+        padding: 0 40px;
+        max-width: 100%;
     }
 
     .client-card {

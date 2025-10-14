@@ -135,3 +135,64 @@
 .team-card:hover .team-photo {
     transform: scale(1.05);
 }
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .section {
+        padding: 3rem 5%;
+        max-width: 100%;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .team-carousel {
+        max-width: 100%;
+        padding: 0 40px;
+    }
+
+    .team-card {
+        min-width: 280px;
+    }
+
+    .team-card .team-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .team-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .team-card p {
+        font-size: 0.9rem;
+    }
+
+    .team-card h4 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 2rem 5%;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .team-carousel {
+        padding: 0 30px;
+    }
+
+    .team-card {
+        min-width: 250px;
+    }
+
+    .team-card .team-photo {
+        width: 120px;
+        height: 120px;
+    }
+}

@@ -100,6 +100,22 @@
      align-items: center;
  }
 
+ @media (max-width: 1024px) {
+     .about-content {
+         grid-template-columns: 1fr;
+     }
+
+     .about-image {
+         text-align: center;
+     }
+
+     .about-image img {
+         max-width: 100% !important;
+         width: 100% !important;
+         height: auto !important;
+     }
+ }
+
  .about-text h3 {
      font-size: 2rem;
      color: #2563eb;
@@ -117,6 +133,12 @@
      grid-template-columns: repeat(2, 1fr);
      gap: 1.5rem;
      margin-top: 2rem;
+ }
+
+ @media (max-width: 768px) {
+     .about-features {
+         grid-template-columns: 1fr;
+     }
  }
 
  .feature-item {
@@ -189,6 +211,12 @@
      grid-template-columns: 1fr 1fr;
      gap: 4rem;
      align-items: center;
+ }
+
+ @media (max-width: 1024px) {
+     .billing-content {
+         grid-template-columns: 1fr;
+     }
  }
 
  .billing-text h2 {
@@ -268,6 +296,12 @@
      display: grid;
      grid-template-columns: 1fr 1fr;
      gap: 4rem;
+ }
+
+ @media (max-width: 1024px) {
+     .contact-content {
+         grid-template-columns: 1fr;
+     }
  }
 
  .contact-info h3 {
@@ -448,6 +482,31 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Remove max-width constraints on mobile */
+    .section,
+    nav {
+        max-width: 100%;
+        padding-left: 5%;
+        padding-right: 5%;
+        overflow-x: hidden;
+    }
+
+    /* Prevent horizontal overflow */
+    .about-content,
+    .about-text,
+    .about-image {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Ensure text wraps properly */
+    .about-text h3,
+    .about-text p {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        max-width: 100%;
+    }
+
     /* Navigation */
     .menu-toggle {
         display: block;
@@ -469,17 +528,22 @@
         display: flex;
     }
 
+    /* Hero section - full width */
+    .hero {
+        padding: 6rem 5% 4rem;
+    }
+
     /* Hero and main sections */
     .hero-content,
     .about-content,
     .contact-content {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
         gap: 2rem;
     }
 
     /* Billing section - invertir orden en móvil */
     .billing-content {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
         gap: 2rem;
     }
 
@@ -495,6 +559,19 @@
     .billing-image img {
         max-width: 100%;
         height: auto;
+    }
+
+    /* About section images */
+    .about-image {
+        text-align: center;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .about-image img {
+        max-width: 100% !important;
+        width: 100% !important;
+        height: auto !important;
     }
 
     /* Typography */
@@ -517,15 +594,34 @@
     }
 
     .modules-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: 1.5rem;
     }
 
     .sectors-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: 1rem;
     }
 
+    .module-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .sector-card {
+        padding: 1.5rem;
+    }
+
+    /* Contact section */
+    .contact-form {
+        padding: 2rem 1.5rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 1rem;
+    }
+
+    /* Footer */
     .footer-content {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -536,15 +632,39 @@
 /* Mobile phones (480px and down) */
 @media (max-width: 480px) {
     .hero-text h1 {
-        font-size: 1.6rem;
+        font-size: 1.75rem;
     }
 
     .section-title {
         font-size: 1.5rem;
     }
 
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
     .modules-grid,
     .sectors-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .module-card i,
+    .sector-card i {
+        font-size: 2.5rem;
+    }
+
+    .module-card h3,
+    .sector-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .billing-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.95rem;
     }
 }
