@@ -4,15 +4,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eVendeha - Sistema de Gestión Empresarial | Paraguay</title>
+    <!-- SEO Meta Tags -->
+    <title>eVendeha - Facturación Electrónica y Sistema de Gestión Empresarial Paraguay</title>
+    <meta name="description"
+        content="eVendeha: Sistema de gestión empresarial completo con facturación electrónica integrada con la SET Paraguay. Control de inventarios, ventas, compras y más. ¡Solicita tu demo gratuita!">
+    <meta name="keywords"
+        content="facturación electrónica Paraguay, sistema gestión empresarial, SET Paraguay, control inventarios, software empresarial, punto de venta, factura digital, gestión comercial Paraguay">
+    <meta name="author" content="eVendeha E.A.S.">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="eVendeha - Facturación Electrónica Paraguay | Sistema de Gestión Empresarial">
+    <meta property="og:description"
+        content="Sistema completo de gestión empresarial con facturación electrónica integrada con la SET Paraguay. Controla inventarios, ventas, compras y más desde una plataforma.">
+    <meta property="og:image" content="https://AmadoDavid97.github.io/evendeha-website/assets/images/hero/hero-image.png">
+    <meta property="og:url" content="https://AmadoDavid97.github.io/evendeha-website/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_PY">
+    <meta property="og:site_name" content="eVendeha">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="eVendeha - Facturación Electrónica Paraguay">
+    <meta name="twitter:description"
+        content="Sistema de gestión empresarial con facturación electrónica integrada con la SET Paraguay.">
+    <meta name="twitter:image" content="https://AmadoDavid97.github.io/evendeha-website/assets/images/hero/hero-image.png">
+    
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/png" href="assets/images/hero/icon.png">
+    <link rel="apple-touch-icon" href="assets/images/hero/icon.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://AmadoDavid97.github.io/evendeha-website/">
+    
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/hero.css">
     <link rel="stylesheet" href="css/clients.css">
     <link rel="stylesheet" href="css/team.css">
-    <!-- <link rel="stylesheet" href="css/"> -->
-    <link rel="icon" type="image/png" href="assets/images/hero/icon.png">
+    <!-- Manifest for PWA -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Structured Data JSON-LD -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "eVendeha E.A.S.",
+            "description": "Sistema de gestión empresarial completo con facturación electrónica integrada con la SET Paraguay",
+            "url": "https://AmadoDavid97.github.io/evendeha-website/",
+            "logo": "https://AmadoDavid97.github.io/evendeha-website/assets/images/hero/hero-image.png",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+595985805967",
+                "contactType": "customer service",
+                "availableLanguage": "Spanish"
+            },
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Calle Mariscal Estigarribia y Nanawa",
+                "addressCountry": "PY",
+                "addressLocality": "Paraguay"
+            },
+            "sameAs": [
+                "https://wa.me/595985805967"
+            ],
+            "offers": {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "SoftwareApplication",
+                    "name": "eVendeha Sistema de Gestión Empresarial",
+                    "applicationCategory": "BusinessApplication",
+                    "operatingSystem": "Web Browser",
+                    "description": "Sistema completo de gestión empresarial con facturación electrónica integrada con la SET Paraguay"
+                }
+            }
+        }
+        </script>
     <script src="js/main.js" defer></script>
 </head>
 
@@ -41,8 +113,9 @@
     <section class="hero" id="inicio">
         <div class="hero-content">
             <div class="hero-text">
-                <h1>Tu empresa, gestionada con inteligencia</h1>
-                <p>Con eVendeha, controla tu negocio, tus ventas y tu facturación electrónica en un solo lugar.</p>
+                <h1>Sistema de Gestión Empresarial con Facturación Electrónica SET Paraguay</h1>
+                <p>Con eVendeha, controla tu negocio, inventarios, ventas y facturación electrónica integrada con la SET en un solo
+                    sistema. ¡La solución completa para empresas paraguayas!</p>
                 <div class="hero-buttons">
                     <a href="#contacto" class="btn btn-primary">Solicitar Demo</a>
                     <a href="#sobre" class="btn btn-secondary">Más Información</a>
@@ -50,7 +123,8 @@
             </div>
             <div class="hero-image">
                 <!-- <i class="fas fa-laptop-code" style="font-size: 25rem; opacity: 0.9;"></i> -->
-                <img src="assets/images/hero/hero-image.png" alt="eVendeha - Sistema de Gestión Empresarial" />
+                <img src="assets/images/hero/hero-image.png"
+                    alt="Sistema de Facturación Electrónica Paraguay eVendeha - Dashboard de Gestión Empresarial" />
             </div>
         </div>
     </section>
@@ -175,12 +249,12 @@
     </section>
 
     <!-- Electronic Billing Section -->
-    <section class="section billing">
+    <section class="section billing" id="facturacion-electronica">
         <div class="billing-content">
             <div class="billing-text">
-                <h2>Facturación Electrónica Integrada</h2>
-                <p>Nuestra principal ventaja competitiva: envía facturas legales directamente a la SET de Paraguay desde
-                    eVendeha.</p>
+                <h2>Facturación Electrónica SET Paraguay - Integrada y Automatizada</h2>
+                <p>Nuestra principal ventaja competitiva: envía facturas electrónicas legales directamente a la SET de Paraguay desde
+                    eVendeha. Sistema homologado y certificado para cumplimiento tributario paraguayo.</p>
                 <div class="billing-features">
                     <div class="billing-feature">
                         <i class="fas fa-check"></i>
@@ -207,7 +281,8 @@
             </div>
             <div class="billing-image">
                 <!-- <i class="fas fa-file-invoice-dollar"></i> -->
-                <img src="assets/images/hero/factura-electronica.png" alt="eVendeha - Sistema de Gestión Empresarial"
+                <img src="assets/images/hero/factura-electronica.png"
+                    alt="Facturación Electrónica SET Paraguay eVendeha - Integración directa con Secretaría de Estado de Tributación"
                     style="width: auto; height: 20rem;" />
             </div>
         </div>

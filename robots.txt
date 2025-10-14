@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://AmadoDavid97.github.io/evendeha-website/sitemap.xml
+
+# Permitir indexación de archivos CSS y JS
+Allow: /css/
+Allow: /js/
+Allow: /assets/
+
+# Bloquear archivos no necesarios para SEO
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /README.md
+
+# Crawl-delay para ser respetuoso con los crawlers
+Crawl-delay: 1
