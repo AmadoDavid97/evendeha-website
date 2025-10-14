@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/clients.css">
+    <link rel="stylesheet" href="css/team.css">
+    <!-- <link rel="stylesheet" href="css/"> -->
+
     <script src="js/main.js" defer></script>
 </head>
+
 <body>
     <!-- Header -->
     <header>
@@ -53,8 +60,11 @@
         <div class="about-content">
             <div class="about-text">
                 <h3>Sistema de Gestión Comercial y Empresarial</h3>
-                <p>eVendeha es un sistema completo diseñado para todo tipo de negocios. Permite gestionar inventarios, compras, ventas, finanzas, empleados, bancos y mucho más, todo desde una única plataforma intuitiva y eficiente.</p>
-                <p>Nuestra principal ventaja competitiva es la integración con la facturación electrónica, permitiendo enviar facturas legales directamente a la SET (Secretaría de Estado de Tributación – Paraguay).</p>
+                <p>eVendeha es un sistema completo diseñado para todo tipo de negocios. Permite gestionar inventarios,
+                    compras, ventas, finanzas, empleados, bancos y mucho más, todo desde una única plataforma intuitiva
+                    y eficiente.</p>
+                <p>Nuestra principal ventaja competitiva es la integración con la facturación electrónica, permitiendo
+                    enviar facturas legales directamente a la SET (Secretaría de Estado de Tributación – Paraguay).</p>
                 <div class="about-features">
                     <div class="feature-item">
                         <i class="fas fa-check-circle"></i>
@@ -88,8 +98,8 @@
             </div>
             <div class="about-image">
                 <!-- <i class="fas fa-chart-line" style="font-size: 20rem; color: #2563eb; opacity: 0.1;"></i> -->
-           <img src="assets/images/hero/dashboard-mockup.png" alt="eVendeha - Sistema de Gestión Empresarial" 
-           style="width: auto; height: 20rem;"/>
+                <img src="assets/images/hero/dashboard-mockup.png" alt="eVendeha - Sistema de Gestión Empresarial"
+                    style="width: auto; height: 20rem;" />
             </div>
         </div>
     </section>
@@ -167,7 +177,8 @@
         <div class="billing-content">
             <div class="billing-text">
                 <h2>Facturación Electrónica Integrada</h2>
-                <p>Nuestra principal ventaja competitiva: envía facturas legales directamente a la SET de Paraguay desde eVendeha.</p>
+                <p>Nuestra principal ventaja competitiva: envía facturas legales directamente a la SET de Paraguay desde
+                    eVendeha.</p>
                 <div class="billing-features">
                     <div class="billing-feature">
                         <i class="fas fa-check"></i>
@@ -194,8 +205,8 @@
             </div>
             <div class="billing-image">
                 <!-- <i class="fas fa-file-invoice-dollar"></i> -->
-                  <img src="assets/images/hero/factura-electronica.png" alt="eVendeha - Sistema de Gestión Empresarial" 
-           style="width: auto; height: 20rem;"/>
+                <img src="assets/images/hero/factura-electronica.png" alt="eVendeha - Sistema de Gestión Empresarial"
+                    style="width: auto; height: 20rem;" />
             </div>
         </div>
     </section>
@@ -240,11 +251,11 @@
         </div>
     </section>
 
-  <!-- Clients Section -->
- <section class="section section-clientsd">
+    <!-- Clients Section -->
+    <section class="section section-clientsd">
         <h2 class="section-title">Nuestros Clientes</h2>
         <p class="section-subtitle">Empresas que confían en eVendeha para gestionar sus negocios</p>
-        
+
         <div class="carousel-container">
             <button class="carousel-button prev" id="prevBtn">
                 <i class="fas fa-chevron-left"></i>
@@ -288,38 +299,60 @@
     <section class="section" id="equipo">
         <h2 class="section-title">Nuestro Equipo</h2>
         <p class="section-subtitle">Profesionales comprometidos con el éxito de tu negocio</p>
-        <div class="team-grid">
-            <div class="team-member">
-                <div class="team-photo">
-                    <i class="fas fa-user"></i>
+        <div class="carousel-container team-carousel">
+            <button class="carousel-button prev" id="teamPrevBtn">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+        
+            <div class="carousel-wrapper">
+                <div class="carousel-track" id="teamCarouselTrack">
+                    <div class="team-card">
+                        <div class="team-photo">
+                            <img src="assets/images/team/victor-velazquez.png" alt="Victor Velázquez - Director General" />
+                            </div>
+                            <h3>Director General</h3>
+                            <p>Liderazgo y Visión Estratégica</p>
+                        <h4>Victor Velázquez</h4>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-photo">
+                            <img src="assets/images/team/amado-oviedo.jpg" alt="Amado Oviedo - Desarrollador Principal" />
+                            </div>
+                            <h3>Desarrollador Principal</h3>
+                            <p>Arquitectura y Desarrollo</p>
+                        <h4>Amado David Oviedo</h4>
+                        </div>
+                        <div class="team-card">
+                            <div class="team-photo">
+                                <img src="assets/images/team/michael-garayo.jpg" alt="Michael Garayo - Analista de Negocios" />
+                                </div>
+                                <h3>Analista de Negocios</h3>
+                                <p>Consultoría y Optimización</p>
+                                <h4>Michael Garayo</h4>
+                                </div>
+                                <div class="team-card">
+                                    <div class="team-photo">
+                                        <img src="assets/images/team/anderson-dasilva.png" alt="Anderson Da Silva - Consultor Comercial" />
+                                    </div>
+                                    <h3>Consultor Comercial</h3>
+                                    <p>Ventas y Estrategia Comercial</p>
+                                    <h4>Anderson Da Silva</h4>
+                                </div>
+                                <div class="team-card">
+                                    <div class="team-photo">
+                                        <img src="assets/images/team/erick-godoy.jpg" alt="Erick Godoy - Soporte Técnico" />
+                                    </div>
+                                    <h3>Soporte Técnico</h3>
+                                    <p>Atención al Cliente</p>
+                        <h4>Erick Godoy</h4>
+                    </div>
                 </div>
-                <h3>Director General</h3>
-                <p>Liderazgo y Visión Estratégica</p>
             </div>
-            <div class="team-member">
-                <div class="team-photo">
-                    <!-- <i class="fas fa-code"></i> -->
-                    <img src="assets/images/team/amado-oviedo.jpg" alt="Amado Oviedo - Desarrollador Principal"
-                        style="width: 150px; height: 150px;" />
-                </div>
-                <h3>Desarrollador Principal</h3>
-                <p>Arquitectura y Desarrollo</p>
-            </div>
-            <div class="team-member">
-                <div class="team-photo">
-                    <i class="fas fa-headset"></i>
-                </div>
-                <h3>Soporte Técnico</h3>
-                <p>Atención al Cliente</p>
-            </div>
-            <div class="team-member">
-                <div class="team-photo">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <h3>Analista de Negocios</h3>
-                <p>Consultoría y Optimización</p>
-            </div>
+            <button class="carousel-button next" id="teamNextBtn">
+                <i class="fas fa-chevron-right"></i>
+            </button>
         </div>
+        <div class="carousel-indicators" id="teamIndicators"></div>
     </section>
 
     <!-- Contact Section -->
@@ -354,7 +387,7 @@
                     <i class="fas fa-clock"></i>
                     <div>
                         <h4>Horario de Atención</h4>
-                        <p>Lunes a Viernes: 8:00 - 18:00<br>Sábados: 8:00 - 12:00</p>
+                        <p>Lunes a Viernes: 7:00 - 17:00<br>Sábados: 7:00 - 12:00</p>
                     </div>
                 </div>
                 <a href="https://wa.me/595985805967" target="_blank" class="whatsapp-btn">
@@ -382,7 +415,8 @@
                     </div>
                     <div class="form-group">
                         <label for="message">Mensaje</label>
-                        <textarea id="message" name="message" placeholder="Cuéntanos sobre tu negocio y cómo podemos ayudarte..." required></textarea>
+                        <textarea id="message" name="message" placeholder="Cuéntanos sobre tu negocio y cómo podemos ayudarte..."
+                            required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary" style="width: 100%;">Solicitar Demo Gratuita</button>
                 </form>
@@ -427,8 +461,10 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 EVendeha E.A.S. Todos los derechos reservados. | Desarrollado con <i class="fas fa-heart" style="color: #f97316;"></i> en Paraguay</p>
+            <p>&copy; 2025 EVendeha E.A.S. Todos los derechos reservados. | Desarrollado con <i class="fas fa-heart"
+                    style="color: #f97316;"></i> en Paraguay</p>
         </div>
     </footer>
 </body>
+
 </html>
