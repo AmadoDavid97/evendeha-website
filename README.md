@@ -1,7 +1,7 @@
-# Project Name
+# eVendeha - Sistema de Gestión Empresarial
 
-## Description
-Brief description of what your project does and its purpose.
+## Descripción
+Sitio web corporativo de eVendeha, sistema de gestión empresarial completo para todo tipo de negocios en Paraguay. Incluye facturación electrónica integrada con la SET.
 
 ## Installation
 ```bash
