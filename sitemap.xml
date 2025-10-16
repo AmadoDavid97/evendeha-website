@@ -3,69 +3,69 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-    
+
     <!-- Página principal -->
     <url>
-        <loc>https://AmadoDavid97.github.io/evendeha-website/</loc>
+        <loc>https://www.evendeha.com/</loc>
         <lastmod>2025-10-14</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
-    
+
     <!-- Sección Inicio -->
     <url>
-        <loc>https://AmadoDavid97.github.io/evendeha-website/#inicio</loc>
+        <loc>https://www.evendeha.com/#inicio</loc>
         <lastmod>2025-10-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
-    
+
     <!-- Sección Sobre eVendeha -->
     <url>
-        <loc>https://AmadoDavid97.github.io/evendeha-website/#sobre</loc>
+        <loc>https://www.evendeha.com/#sobre</loc>
         <lastmod>2025-10-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-    
+
     <!-- Sección Módulos del Sistema -->
     <url>
-        <loc>https://AmadoDavid97.github.io/evendeha-website/#modulos</loc>
+        <loc>https://www.evendeha.com/#modulos</loc>
         <lastmod>2025-10-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-    
+
     <!-- Sección Facturación Electrónica -->
     <url>
-        <loc>https://AmadoDavid97.github.io/evendeha-website/#facturacion-electronica</loc>
+        <loc>https://www.evendeha.com/#facturacion-electronica</loc>
         <lastmod>2025-10-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
-    
+
     <!-- Sección Sectores -->
     <url>
-        <loc>https://AmadoDavid97.github.io/evendeha-website/#sectores</loc>
+        <loc>https://www.evendeha.com/#sectores</loc>
         <lastmod>2025-10-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
-    
+
     <!-- Sección Equipo -->
     <url>
-        <loc>https://AmadoDavid97.github.io/evendeha-website/#equipo</loc>
+        <loc>https://www.evendeha.com/#equipo</loc>
         <lastmod>2025-10-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
-    
+
     <!-- Sección Contacto -->
     <url>
-        <loc>https://AmadoDavid97.github.io/evendeha-website/#contacto</loc>
+        <loc>https://www.evendeha.com/#contacto</loc>
         <lastmod>2025-10-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-    
+
 </urlset>

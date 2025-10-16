@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://AmadoDavid97.github.io/evendeha-website/sitemap.xml
+Sitemap: https://www.evendeha.com/sitemap.xml
 
 # Permitir indexación de archivos CSS y JS
 Allow: /css/
