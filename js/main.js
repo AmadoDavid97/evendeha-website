@@ -76,6 +76,38 @@
             observer.observe(card);
         });
 
+        // Cargar clientes desde JSON
+        async function loadClients() {
+            try {
+                const response = await fetch('assets/data/clients.json');
+                const data = await response.json();
+                const track = document.getElementById('carouselTrack');
+                
+                // Renderizar cada cliente
+                data.clients.forEach(client => {
+                    const clientCard = document.createElement('div');
+                    clientCard.className = 'client-card';
+                    clientCard.innerHTML = `<img src="${client.image}" alt="${client.alt}" />`;
+                    track.appendChild(clientCard);
+                });
+                
+                // Agregar tarjeta con total de clientes
+                const moreCard = document.createElement('div');
+                moreCard.className = 'client-card client-more';
+                moreCard.textContent = `+${data.totalClients} clientes`;
+                track.appendChild(moreCard);
+                
+                // Inicializar carousel después de cargar los datos
+                initClientsCarousel();
+            } catch (error) {
+                console.error('Error al cargar clientes:', error);
+            }
+        }
+
+        // Llamar a la función para cargar clientes
+        loadClients();
+
+        function initClientsCarousel() {
         const track = document.getElementById('carouselTrack');
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
@@ -264,9 +296,10 @@ function handleInfiniteTransition() {
         });
 
         // Inicializar
-createInfiniteCards();
+        createInfiniteCards();
         createIndicators();
         updateCarousel();
+        } // Fin de initClientsCarousel()
 
 // ====== TEAM CAROUSEL FUNCTIONALITY ======
 const teamTrack = document.getElementById('teamCarouselTrack');

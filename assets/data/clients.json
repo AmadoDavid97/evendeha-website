@@ -1,0 +1,41 @@
+{
+  "clients": [
+    {
+      "id": 1,
+      "name": "Colona",
+      "image": "assets/images/clients/colona.jpeg",
+      "alt": "Colona - Cliente eVendeha"
+    },
+    {
+      "id": 2,
+      "name": "Grefran",
+      "image": "assets/images/clients/grefran.jpeg",
+      "alt": "Grefran - Cliente eVendeha"
+    },
+    {
+      "id": 3,
+      "name": "JS Deposito",
+      "image": "assets/images/clients/jsDeposito.jpg",
+      "alt": "JS Deposito - Cliente eVendeha"
+    },
+    {
+      "id": 4,
+      "name": "Comercial Guarani",
+      "image": "assets/images/clients/comercial-guarani.png",
+      "alt": "Comercial Guarani - Cliente eVendeha"
+    },
+    {
+      "id": 5,
+      "name": "Ferreteria Batte",
+      "image": "assets/images/clients/ferreteria-batte.jpeg",
+      "alt": "Ferreteria Batte - Cliente eVendeha"
+    },
+    {
+      "id": 6,
+      "name": "Ferreteria Marcos Alexis",
+      "image": "assets/images/clients/ferreteria-marcos-alexis.jpeg",
+      "alt": "Ferreteria Marcos Alexis - Cliente eVendeha"
+    }
+  ],
+  "totalClients": 150
+}
