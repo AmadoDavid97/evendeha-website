@@ -132,32 +132,35 @@ function createInfiniteCards() {
     // Limpiar clones existentes
     track.querySelectorAll('.clone').forEach(clone => clone.remove());
 
-    // Clonar primeras tarjetas al final
-    for (let i = 0; i < cardsToShow; i++) {
-        const clone = cards[i].cloneNode(true);
+    // Clonar todas las cards al final
+    cards.forEach(card => {
+        const clone = card.cloneNode(true);
         clone.classList.add('clone');
         track.appendChild(clone);
-    }
+    });
 
-    // Clonar últimas tarjetas al inicio
-    for (let i = totalCards - cardsToShow; i < totalCards; i++) {
+    // Clonar todas las cards al inicio
+    for (let i = totalCards - 1; i >= 0; i--) {
         const clone = cards[i].cloneNode(true);
         clone.classList.add('clone');
         track.insertBefore(clone, track.firstChild);
     }
 
     // Ajustar posición inicial
-    currentIndex = cardsToShow;
+    currentIndex = totalCards;
     updateCarouselPosition(false);
 }
 
 function updateCarouselPosition(withTransition = true) {
-    const cardWidth = track.querySelector('.client-card').offsetWidth;
-            const gap = 24; // 1.5rem
-            const offset = currentIndex * (cardWidth + gap);
+    const allCards = track.querySelectorAll('.client-card');
+    if (allCards.length === 0) return;
+    
+    const cardWidth = allCards[0].offsetWidth;
+    const gap = 24; // 1.5rem
+    const offset = currentIndex * (cardWidth + gap);
 
-    track.style.transition = withTransition ? 'transform 0.3s ease' : 'none';
-            track.style.transform = `translateX(-${offset}px)`;
+    track.style.transition = withTransition ? 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)' : 'none';
+    track.style.transform = `translateX(-${offset}px)`;
 }
 
 function updateCarousel() {
@@ -174,8 +177,10 @@ function updateCarousel() {
                 const indicator = document.createElement('div');
                 indicator.className = 'indicator';
                 indicator.addEventListener('click', () => {
-                    currentIndex = i + cardsToShow;
+                    if (isTransitioning) return;
+                    currentIndex = i + totalCards;
                     updateCarousel();
+                    handleInfiniteTransition();
                 });
                 indicatorsContainer.appendChild(indicator);
             }
@@ -183,7 +188,7 @@ function updateCarousel() {
 
         function updateIndicators() {
             const indicators = indicatorsContainer.querySelectorAll('.indicator');
-            const realIndex = (currentIndex - cardsToShow + totalCards) % totalCards;
+            const realIndex = (currentIndex - totalCards + totalCards) % totalCards;
             indicators.forEach((indicator, index) => {
                 indicator.classList.toggle('active', index === realIndex);
             });
@@ -192,24 +197,26 @@ function updateCarousel() {
 function handleInfiniteTransition() {
     isTransitioning = true;
 
-    track.addEventListener('transitionend', function handleTransitionEnd() {
+    const handleTransitionEnd = () => {
         track.removeEventListener('transitionend', handleTransitionEnd);
 
-        // Si llegamos al final (clones del principio)
-        if (currentIndex >= totalCards + cardsToShow) {
-            currentIndex = cardsToShow;
+        // Si llegamos al final (últimos clones)
+        if (currentIndex >= totalCards * 2) {
+            currentIndex = totalCards;
             updateCarouselPosition(false);
         }
-        // Si llegamos al principio (clones del final)
-        else if (currentIndex < cardsToShow) {
+        // Si llegamos al principio (primeros clones)
+        else if (currentIndex <= 0) {
             currentIndex = totalCards;
             updateCarouselPosition(false);
         }
 
         isTransitioning = false;
         updateIndicators();
-            });
-        }
+    };
+
+    track.addEventListener('transitionend', handleTransitionEnd);
+}
 
         prevBtn.addEventListener('click', () => {
             if (isTransitioning) return;
@@ -326,31 +333,39 @@ function createInfiniteTeamCards() {
     // Limpiar clones existentes
     teamTrack.querySelectorAll('.clone').forEach(clone => clone.remove());
 
-    // Clonar primeras tarjetas al final
-    for (let i = 0; i < teamCardsToShow; i++) {
-        const clone = teamCards[i].cloneNode(true);
+    // Clonar todas las cards al final
+    teamCards.forEach(card => {
+        const clone = card.cloneNode(true);
         clone.classList.add('clone');
         teamTrack.appendChild(clone);
-    }
+    });
 
-    // Clonar últimas tarjetas al inicio
-    for (let i = teamTotalCards - teamCardsToShow; i < teamTotalCards; i++) {
+    // Clonar todas las cards al inicio
+    for (let i = teamTotalCards - 1; i >= 0; i--) {
         const clone = teamCards[i].cloneNode(true);
         clone.classList.add('clone');
         teamTrack.insertBefore(clone, teamTrack.firstChild);
     }
 
     // Ajustar posición inicial
-    teamCurrentIndex = teamCardsToShow;
+    // En móviles (1 card visible), empezar en la card #2 (Amado David Oviedo)
+    if (teamCardsToShow === 1) {
+        teamCurrentIndex = teamTotalCards + 1; // Empieza en card #2 (índice 1)
+    } else {
+        teamCurrentIndex = teamTotalCards; // Empieza en card #1 en otros tamaños
+    }
     updateTeamCarouselPosition(false);
 }
 
 function updateTeamCarouselPosition(withTransition = true) {
-    const cardWidth = teamTrack.querySelector('.team-card').offsetWidth;
+    const allCards = teamTrack.querySelectorAll('.team-card');
+    if (allCards.length === 0) return;
+    
+    const cardWidth = allCards[0].offsetWidth;
     const gap = 24; // 1.5rem
     const offset = teamCurrentIndex * (cardWidth + gap);
 
-    teamTrack.style.transition = withTransition ? 'transform 0.3s ease' : 'none';
+    teamTrack.style.transition = withTransition ? 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)' : 'none';
     teamTrack.style.transform = `translateX(-${offset}px)`;
 }
 
@@ -364,23 +379,25 @@ function updateTeamCarousel() {
 function handleTeamInfiniteTransition() {
     teamIsTransitioning = true;
 
-    teamTrack.addEventListener('transitionend', function handleTransitionEnd() {
+    const handleTransitionEnd = () => {
         teamTrack.removeEventListener('transitionend', handleTransitionEnd);
 
-        // Si llegamos al final (clones del principio)
-        if (teamCurrentIndex >= teamTotalCards + teamCardsToShow) {
-            teamCurrentIndex = teamCardsToShow;
+        // Si llegamos al final (últimos clones)
+        if (teamCurrentIndex >= teamTotalCards * 2) {
+            teamCurrentIndex = teamTotalCards;
             updateTeamCarouselPosition(false);
         }
-        // Si llegamos al principio (clones del final)
-        else if (teamCurrentIndex < teamCardsToShow) {
+        // Si llegamos al principio (primeros clones)
+        else if (teamCurrentIndex <= 0) {
             teamCurrentIndex = teamTotalCards;
             updateTeamCarouselPosition(false);
         }
 
         teamIsTransitioning = false;
         updateTeamIndicators();
-    });
+    };
+
+    teamTrack.addEventListener('transitionend', handleTransitionEnd);
 }
 
 function createTeamIndicators() {
@@ -390,8 +407,10 @@ function createTeamIndicators() {
         const indicator = document.createElement('div');
         indicator.className = 'indicator';
         indicator.addEventListener('click', () => {
-            teamCurrentIndex = i + teamCardsToShow;
+            if (teamIsTransitioning) return;
+            teamCurrentIndex = i + teamTotalCards;
             updateTeamCarousel();
+            handleTeamInfiniteTransition();
         });
         teamIndicatorsContainer.appendChild(indicator);
     }
@@ -399,7 +418,7 @@ function createTeamIndicators() {
 
 function updateTeamIndicators() {
     const indicators = teamIndicatorsContainer.querySelectorAll('.indicator');
-    const realIndex = (teamCurrentIndex - teamCardsToShow + teamTotalCards) % teamTotalCards;
+    const realIndex = (teamCurrentIndex - teamTotalCards + teamTotalCards) % teamTotalCards;
     indicators.forEach((indicator, index) => {
         indicator.classList.toggle('active', index === realIndex);
     });
