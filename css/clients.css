@@ -31,8 +31,9 @@
 }
 
 .carousel-wrapper {
-    overflow: hidden;
+    overflow: visible;
     position: relative;
+    
 }
 
 .carousel-track {
