@@ -6,7 +6,7 @@
 
     <!-- Página principal -->
     <url>
-        <loc>https://evendeha.com/</loc>
+        <loc>https://evendeha.com.py/</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -14,7 +14,7 @@
 
     <!-- Sección Inicio -->
     <url>
-        <loc>https://evendeha.com/#inicio</loc>
+        <loc>https://evendeha.com.py/#inicio</loc>
         <lastmod>2025-10-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
@@ -22,7 +22,7 @@
 
     <!-- Sección Sobre eVendeha -->
     <url>
-        <loc>https://evendeha.com/#sobre</loc>
+        <loc>https://evendeha.com.py/#sobre</loc>
         <lastmod>2025-10-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -30,7 +30,7 @@
 
     <!-- Sección Módulos del Sistema -->
     <url>
-        <loc>https://evendeha.com/#modulos</loc>
+        <loc>https://evendeha.com.py/#modulos</loc>
         <lastmod>2025-10-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -38,7 +38,7 @@
 
     <!-- Sección Facturación Electrónica -->
     <url>
-        <loc>https://evendeha.com/#facturacion-electronica</loc>
+        <loc>https://evendeha.com.py/#facturacion-electronica</loc>
         <lastmod>2025-10-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
@@ -46,7 +46,7 @@
 
     <!-- Sección Sectores -->
     <url>
-        <loc>https://evendeha.com/#sectores</loc>
+        <loc>https://evendeha.com.py/#sectores</loc>
         <lastmod>2025-10-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -54,7 +54,7 @@
 
     <!-- Sección Equipo -->
     <url>
-        <loc>https://evendeha.com/#equipo</loc>
+        <loc>https://evendeha.com.py/#equipo</loc>
         <lastmod>2025-10-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
@@ -62,7 +62,7 @@
 
     <!-- Sección Contacto -->
     <url>
-        <loc>https://evendeha.com/#contacto</loc>
+        <loc>https://evendeha.com.py/#contacto</loc>
         <lastmod>2025-10-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
